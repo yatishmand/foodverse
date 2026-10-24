@@ -216,7 +216,6 @@ function App() {
           <div className="content-area">
             <div className="content-heading"><div><p className="eyebrow">FOOD VERSE TOOLKIT</p><h2>{activeFeature.label}</h2></div><span className="demo-tag">SAMPLE DATA</span></div>
             {renderFeature()}
-            <p className="site-note">Demo only: image checks use sample responses and do not actually analyze image contents. Nutrition estimates are illustrative, not medical advice.</p>
           </div>
         </div>
       </main>
