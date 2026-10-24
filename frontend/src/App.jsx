@@ -194,7 +194,6 @@ function App() {
     <div className="app-shell">
       <header className="topbar">
         <a className="brand" href="#" aria-label="Food Verse AI home"><span className="brand-mark">fv</span><span>food verse <strong>AI</strong></span></a>
-        <span className="demo-tag header-demo">DEMO PROJECT</span>
       </header>
       <main>
         <section className="welcome">
