@@ -47,10 +47,9 @@ The root-level `render.yaml` defines two free Render services: a FastAPI web ser
 
 1. Push the project to a GitHub repository.
 2. In the [Render Dashboard](https://dashboard.render.com), choose **New > Blueprint** and connect that repository.
-3. Review the two services from `render.yaml` and deploy the Blueprint.
-4. After the frontend's first deployment, copy its `https://...onrender.com` URL from the Render Dashboard.
-5. Open the **food-verse-api** service's **Environment** settings. Set `FRONTEND_ORIGINS` to the exact frontend URL (scheme included, with no trailing slash), save, and let the backend redeploy. Local development origins remain enabled.
-6. Open the frontend's Render URL and test the tools. The API health endpoint is available at `<backend-url>/api/health`.
+3. Review the two services from `render.yaml` and deploy the Blueprint. The Blueprint sets the frontend API URL and backend CORS origin to `https://food-verse-api.onrender.com` and `https://food-verse-frontend.onrender.com`, respectively.
+4. If these service names or URLs change, update `VITE_API_BASE_URL` on the frontend service and `FRONTEND_ORIGINS` on the backend service to match, then redeploy both services.
+5. Open the frontend's Render URL and test the tools. The API health endpoint is available at `<backend-url>/api/health`.
 
 Render free web services may spin down after inactivity, so the first API request after a quiet period can take longer. The API key placeholder in `backend/.env` is not needed for this demo; configure any future provider key in the backend service's Render environment, not in the frontend.
 
