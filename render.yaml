@@ -11,10 +11,8 @@ services:
       - key: FRONTEND_ORIGINS
         value: ""
 
-  - type: web
+  - type: static
     name: food-verse-frontend
-    runtime: static
-    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
