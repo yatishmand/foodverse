@@ -47,6 +47,16 @@ async def validate_image(image: UploadFile) -> None:
     await image.close()
 
 
+@app.get("/")
+async def root():
+    return {
+        "name": "Food Verse AI API",
+        "status": "ok",
+        "docs": "/docs",
+        "health": "/api/health",
+    }
+
+
 @app.get("/api/health")
 async def health():
     return {"status": "ok", "mode": "demo"}
